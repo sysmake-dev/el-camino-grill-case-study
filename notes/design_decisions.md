@@ -54,7 +54,7 @@ A hamburger menu allows users to quickly jump to sections of the page using anch
 
 ## Permanent Solid Header
 
-**Decision:** Use a solid-colored header at all times rather than a transparent header that transitions on scroll.
+**Decision:** Use a solid-colored header at all times instead of a transparent header that transitions on scroll.
 
 **Reasoning:**
 
@@ -66,7 +66,7 @@ A permanent solid header guarantees sufficient contrast between the logo, naviga
 - ensures consistent accessibility
 - reinforces a clean and dependable visual identity
 
-While transparent headers can create a more dramatic aesthetic, clarity and usability better align with El Camino Grill's goals. Customers visiting the site are typically looking for information quickly, often while deciding where to eat. Prioritizing legibility over visual effects better serves this use case.
+Granted, transparent headers can serve their function, but within the scope of this project, it can create a more dramatic aesthetic, whereas clarity and usability better align with El Camino Grill's goals. Customers visiting the site are typically looking for information quickly, often while deciding where to eat. Prioritizing legibility over visual effects better serves this use case, as well as ensuring low-head maintenance.
 
 ---
 
