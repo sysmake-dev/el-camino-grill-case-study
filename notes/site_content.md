@@ -10,7 +10,7 @@ Family recipes. Fresh every day.
 **background:** #006341
 **text:** #f0e6dc
 
-_note:_ there will be a bg img for the hero section
+*note:* There will be a background image for the hero section.
 
 ## Location
 
