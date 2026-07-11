@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Camino Grill - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav__container">
+        <div class="logo">
+          <a href="index.html">El Camino Grill</a>
+        </div>
+
+        <button
+          class="nav__toggle"
+          aria-expanded="false"
+          aria-label="Toggle menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav class="nav nav__items__container" aria-label="Primary">
+          <ul>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="hero__container container">
+          <h1 class="hero__tagline">
+            Authentic
+            <span class="hero__span">
+              <span class="hero__span__green">Me</span
+              ><span class="hero__span__white">xic</span
+              ><span class="hero__span__red">an</span>
+            </span>
+            Street Food
+          </h1>
+          <p class="hero__subtitle">Family recipes. Made fresh every day.</p>
+          <a href="#menu">
+            <button class="hero__cta">
+              <span class="hero__cta__top">View Menu →</span>
+            </button></a
+          >
+        </div>
+      </section>
+
+      <section id="location">
+        <div class="container">
+          <h2 class="location__title">Location</h2>
+
+          <div class="location__card">
+            <p>123 Del Prado Blvd N, Cape Coral, FL 33909</p>
+            <p><strong>Hours: </strong>Tue-Sat · 4PM-9PM</p>
+
+            <div class="location__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3565.7758523310654!2d-81.94350512563445!3d26.65565827109214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db415a22fa9211%3A0x3dfa9fcb349773fb!2s123%20Del%20Prado%20Blvd%20N%2C%20Cape%20Coral%2C%20FL%2033909!5e0!3m2!1sen!2sus!4v1772910091042!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu">
+        <div class="container">
+          <h2 class="menu__title">Menu</h2>
+
+          <div class="menu__wrapper">
+            <div class="menu__item">
+              <h3>Tacos</h3>
+              <img
+                src="assets/images/site/menu-item-taco.jpg"
+                alt="Menu item number one - tacos"
+              />
+              <p class="menu__item__price">$3.50</p>
+              <ul class="menu__item__desc">
+                <li>Carne Asada</li>
+                <li>Pollo (Chicken)</li>
+                <li>Carnitas</li>
+                <li>Veggie</li>
+              </ul>
+            </div>
+            <div class="menu__item">
+              <h3>Burrito</h3>
+              <img
+                src="assets/images/site/menu-item-burrito.jpg"
+                alt="Menu item number two - burrito"
+              />
+              <p class="menu__item__price">$4.50</p>
+              <ul class="menu__item__desc">
+                <li>Carne Asada</li>
+                <li>Chicken Verde</li>
+                <li>Bean & Cheese</li>
+              </ul>
+            </div>
+            <div class="menu__item">
+              <h3>Quesadillas</h3>
+              <img
+                src="assets/images/site/menu-item-quesadillas.jpg"
+                alt="Menu item number three - quesadillas"
+              />
+              <p class="menu__item__price">$5.50</p>
+              <ul class="menu__item__desc">
+                <li>Pollo (Chicken)</li>
+                <li>Steak</li>
+                <li>Veggie</li>
+              </ul>
+            </div>
+            <div class="menu__more" id="menu-more">
+              <div class="menu__item">
+                <h3>Chips & Salsa</h3>
+                <img
+                  src="assets/images/site/menu-item-chips-and-salsa.jpg"
+                  alt="Menu item number four - chips and salsa"
+                />
+                <p class="menu__item__price">$3.00</p>
+              </div>
+              <div class="menu__item">
+                <h3>Elote</h3>
+                <img
+                  src="assets/images/site/menu-item-elote.jpg"
+                  alt="Menu item number five - elote"
+                />
+                <p class="menu__item__price">$2.50</p>
+              </div>
+              <div class="menu__item">
+                <h3>Mexican Soda</h3>
+                <p class="menu__item__price">$3.00</p>
+              </div>
+              <div class="menu__item">
+                <h3>Water</h3>
+                <p class="menu__item__price">$2.00</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="menu__toggle"
+              aria-expanded="false"
+              aria-controls="menu-more"
+            >
+              View More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <img src="assets/images/site/about.jpg" alt="" />
+          <h2 class="about__title">About</h2>
+          <p>
+            El Camino Grill started with family recipes and a dream to share our
+            food with the community. We cook everything fresh and serve it with
+            pride.
+          </p>
+          <p>Thank you for supporting local.</p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2 class="contact__title">Contact</h2>
+          <p>You can reach out to us here:</p>
+
+          <p>
+            <span class="contact__list__span">Phone:</span
+            ><a href="tel:+12391234567"> (239) 123 - 4567</a>
+          </p>
+          <p>
+            <span class="contact__list__span">Email:</span
+            ><a href="mailto:contact@elcaminogrill.com">
+              contact@elcaminogrill.com</a
+            >
+          </p>
+          <p><span class="contact__list__span">Facebook:</span></p>
+          <p><a href="index.html" target="__blank()"> @elcaminogrill</a></p>
+          <p><span class="contact__list__span">Instragram:</span></p>
+          <p><a href="index.html" target="__blank()"> @elcaminogrill</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 El Camino Grill. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
