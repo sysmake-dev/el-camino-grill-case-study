@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+.header {
+  border-bottom: 2px solid black;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: none;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  margin-bottom: 0.75rem;
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: 2px solid black;
+  padding: 0.25rem 0.5rem;
+}
+
+#home {
+  border: 2px solid black;
+  text-align: center;
+}
+
+.hero__tagline {
+  margin-top: 0;
+}
+
+.hero__cta {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid black;
+  background: none;
+}
+
+.location__card {
+  border: 2px solid black;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.menu__wrapper {
+  margin-top: 1rem;
+}
+
+.menu__item {
+  border: 2px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu__item img {
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+.menu__wrapper button {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid black;
+  background: none;
+}
+
+#about {
+  border-top: 2px dashed black;
+}
+
+#contact {
+  border-top: 2px dashed black;
+}
+
+footer {
+  border-top: 2px solid black;
+  text-align: center;
+  padding: 2rem 1rem;
+}
