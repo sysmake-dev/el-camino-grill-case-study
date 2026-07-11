@@ -1,0 +1,465 @@
+/* ================================
+   RESET
+   ================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* ================================
+   DESIGN TOKENS
+   ================================= */
+
+:root {
+  --color-cream: #f0e6dc;
+  --color-cream-light: #ffffff;
+  --color-dark: #282828;
+  --color-green: #006341;
+  --color-green-light: #027f53;
+  --color-green-dark: #00442c;
+  --color-green-darker: #002618;
+  --color-red: #a3112a;
+  --color-red-light: #d01635;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xl2: 4rem;
+}
+
+/* ================================
+   FONTS  
+   ================================= */
+
+@font-face {
+  font-family: "Handmade Alphabet";
+  src: url("../fonts/Handmade Alphabet.otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================
+   BASE TYPOGRAPHY & STYLING
+   ================================= */
+
+body {
+  font-family: "Handmade Alphabet", sans-serif;
+  background: var(--color-cream);
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+button {
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+}
+
+img {
+  border-radius: 3px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-green-darker);
+  outline-offset: 3px;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-green-darker);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+section {
+  padding: var(--space-xl) 0;
+  scroll-margin-top: 80px;
+}
+
+/* ================================
+   HEADER
+   ================================= */
+
+.header {
+  background: var(--color-green);
+  color: var(--color-cream);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--color-cream);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: none;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  margin-bottom: var(--space-md);
+  color: var(--color-dark);
+  font-size: 1.3rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.nav__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__toggle .bar {
+  width: 100%;
+  height: 3px;
+  background: var(--color-cream);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ================================
+   HAMBURGER ANIMATION
+   ================================= */
+
+.nav__toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav__toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================================
+   MOBILE MENU PANEL
+   ================================= */
+
+.nav {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--color-cream);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.nav__items__container ul {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.nav ul {
+  padding: var(--space-lg);
+}
+
+.nav a {
+  display: block;
+  padding: var(--space-sm) 0;
+}
+
+.nav.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================================
+   HERO
+   ================================= */
+
+#home {
+  min-height: 90vh;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/site/hero-image-test.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(5rem);
+}
+
+.hero__tagline {
+  font-size: 2.3rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-cream);
+  letter-spacing: 0.03em;
+}
+
+.hero__subtitle {
+  margin-top: 2.3rem;
+  margin-bottom: var(--space-lg);
+  color: var(--color-cream);
+  font-size: 1.5rem;
+}
+
+.hero__cta {
+  background: var(--color-green-darker);
+  color: var(--color-cream);
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-family: "Handmade Alphabet", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.hero__cta__top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--color-green-dark);
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  background: var(--color-green);
+  transform: translateY(-0.2em) translateX(0.2em);
+}
+
+.hero__cta:hover {
+  background: var(--color-green-dark);
+}
+
+.hero__span {
+  font-style: italic;
+}
+
+.hero__span__green {
+  color: var(--color-green-light);
+}
+
+.hero__span__cream {
+  color: var(--color-cream-light);
+}
+
+.hero__span__red {
+  color: var(--color-red-light);
+}
+
+/* ================================
+   LOCATION
+   ================================= */
+
+#location {
+  background: var(--color-red);
+}
+
+#location h2 {
+  color: var(--color-cream);
+}
+
+#location p {
+  font-size: 1.2rem;
+}
+
+.location__card {
+  color: var(--color-cream);
+  margin-top: var(--space-md);
+}
+
+.location__map {
+  margin-top: 1.5rem;
+}
+
+.location__map iframe {
+  width: 100%;
+  height: 25rem;
+  border-radius: 3px;
+}
+
+/* ================================
+   MENU
+   ================================= */
+
+.menu__wrapper {
+  margin-top: var(--space-lg);
+}
+
+.menu__item {
+  margin-bottom: var(--space-lg);
+}
+
+.menu__item img {
+  width: 100%;
+  height: auto;
+}
+
+.menu__item h3 {
+  color: var(--color-green-dark);
+}
+
+.menu__item__price {
+  color: var(--color-green);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.menu__item__desc {
+  margin-top: 2rem;
+  color: var(--color-dark);
+  font-size: 1.2rem;
+}
+
+.menu__wrapper button {
+  width: 100%;
+  padding: 0.9rem;
+  border: 2px solid var(--color-green);
+  background: transparent;
+  color: var(--color-green);
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: "Handmade Alphabet", sans-serif;
+  transition: 0.2s ease;
+}
+
+.menu__wrapper button:hover {
+  background: var(--color-green-dark);
+  color: var(--color-cream);
+}
+
+.menu__more {
+  display: none;
+}
+
+.menu__more.active {
+  display: contents;
+}
+
+/* ================================
+   ABOUT
+   ================================= */
+
+#about {
+  padding: var(--space-sm);
+}
+
+#about img {
+  width: 100%;
+  height: auto;
+}
+
+.about__title {
+  margin-top: 1rem;
+}
+
+#about p {
+  color: var(--color-dark);
+  font-size: 1.2rem;
+}
+
+/* ================================
+   CONTACT
+   ================================= */
+
+#contact {
+  padding: var(--space-sm);
+}
+
+#contact p {
+  margin-top: var(--space-sm);
+  color: var(--color-dark);
+  font-size: 1.2rem;
+}
+
+#contact a {
+  color: var(--color-green-light);
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: var(--color-green);
+}
+
+.contact__list__span {
+  font-weight: 600;
+  color: var(--color-green-darker);
+}
+
+/* ================================
+   FOOTER
+   ================================= */
+
+footer {
+  background: var(--color-green-light);
+  color: var(--color-cream);
+  text-align: center;
+  padding: var(--space-lg);
+}
