@@ -321,15 +321,16 @@ section {
    ================================= */
 
 #location {
-  background: var(--color-red);
+  background: var(--color-cream);
 }
 
 #location h2 {
-  color: var(--color-cream);
+  color: var(--color-green);
 }
 
 #location p {
   font-size: 1.2rem;
+  color: var(--color-dark);
 }
 
 .location__card {
@@ -351,6 +352,14 @@ section {
    MENU
    ================================= */
 
+#menu {
+  background: var(--color-green-dark);
+}
+
+.menu__title {
+  color: var(--color-cream);
+}
+
 .menu__wrapper {
   margin-top: var(--space-lg);
 }
@@ -365,27 +374,27 @@ section {
 }
 
 .menu__item h3 {
-  color: var(--color-green-dark);
+  color: var(--color-cream);
 }
 
 .menu__item__price {
-  color: var(--color-green);
+  color: var(--color-cream);
   font-size: 1.3rem;
   font-weight: 800;
 }
 
 .menu__item__desc {
   margin-top: 2rem;
-  color: var(--color-dark);
+  color: var(--color-cream);
   font-size: 1.2rem;
 }
 
 .menu__wrapper button {
   width: 100%;
   padding: 0.9rem;
-  border: 2px solid var(--color-green);
+  border: 2px solid var(--color-green-light);
   background: transparent;
-  color: var(--color-green);
+  color: var(--color-cream);
   cursor: pointer;
   font-size: 1.3rem;
   font-family: "Handmade Alphabet", sans-serif;
@@ -393,8 +402,7 @@ section {
 }
 
 .menu__wrapper button:hover {
-  background: var(--color-green-dark);
-  color: var(--color-cream);
+  background: var(--color-green-light);
 }
 
 .menu__more {
@@ -420,6 +428,7 @@ section {
 
 .about__title {
   margin-top: 1rem;
+  color: var(--color-green);
 }
 
 #about p {
@@ -433,6 +442,10 @@ section {
 
 #contact {
   padding: var(--space-sm);
+}
+
+.contact__title {
+  color: var(--color-green);
 }
 
 #contact p {
