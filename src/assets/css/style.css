@@ -123,6 +123,7 @@ section {
   top: 0;
   z-index: 1000;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 4px solid var(--color-green-darker);
 }
 
 .nav__container {
@@ -210,6 +211,7 @@ section {
   opacity: 0;
   pointer-events: none;
   transition: all 0.25s ease;
+  border-bottom: 4px solid var(--color-green-darker);
 }
 
 .nav__items__container ul {
@@ -458,8 +460,23 @@ section {
    ================================= */
 
 footer {
-  background: var(--color-green-light);
+  background: var(--color-green);
   color: var(--color-cream);
   text-align: center;
   padding: var(--space-lg);
+  border-top: 4px solid var(--color-green-darker);
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.footer__socials a {
+  font-size: 2rem;
+  color: var(--color-bg);
+  transition: all 0.3s ease;
 }
