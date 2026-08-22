@@ -329,7 +329,7 @@ section {
 }
 
 #location p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--color-dark);
 }
 
@@ -340,12 +340,16 @@ section {
 
 .location__map {
   margin-top: 1.5rem;
+  overflow: hidden;
+  border: 2px solid var(--color-green);
+  border-radius: 3px;
 }
 
 .location__map iframe {
+  display: block;
   width: 100%;
-  height: 25rem;
-  border-radius: 3px;
+  height: 30rem;
+  border: 0;
 }
 
 /* ================================
@@ -361,56 +365,120 @@ section {
 }
 
 .menu__wrapper {
-  margin-top: var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+  max-width: 900px;
+  margin: var(--space-xl) auto 0;
 }
 
 .menu__item {
-  margin-bottom: var(--space-lg);
+  overflow: hidden;
+  background: var(--color-green-darker);
+  border-radius: 3px;
+  border: 2px solid var(--color-green);
 }
 
 .menu__item img {
+  display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.menu__item__content {
+  padding: 1.25rem 1.5rem;
+}
+
+.menu__item__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
 }
 
 .menu__item h3 {
+  margin: 0;
   color: var(--color-cream);
+  font-size: 1.6rem;
 }
 
 .menu__item__price {
+  margin: 0;
   color: var(--color-cream);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .menu__item__desc {
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.7rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
   color: var(--color-cream);
   font-size: 1.2rem;
+  list-style: none;
 }
 
-.menu__wrapper button {
-  width: 100%;
-  padding: 0.9rem;
-  border: 2px solid var(--color-green-light);
-  background: transparent;
-  color: var(--color-cream);
-  cursor: pointer;
-  font-size: 1.3rem;
-  font-family: "Handmade Alphabet", sans-serif;
-  transition: 0.2s ease;
-}
-
-.menu__wrapper button:hover {
-  background: var(--color-green-light);
+.menu__item__desc li:not(:last-child)::after {
+  content: "•";
+  margin-left: 0.7rem;
+  opacity: 0.5;
 }
 
 .menu__more {
   display: none;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
 }
 
 .menu__more.active {
-  display: contents;
+  display: grid;
+}
+
+.menu__item--simple {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item--simple .menu__item__content {
+  width: 100%;
+}
+
+.menu__toggle {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 0.85rem;
+  border: 2px solid var(--color-green-light);
+  background: transparent;
+  color: var(--color-cream);
+  cursor: pointer;
+  font-family: "Handmade Alphabet", sans-serif;
+  font-size: 1.2rem;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.menu__toggle:hover {
+  background: var(--color-green-light);
+}
+
+@media (max-width: 600px) {
+  .menu__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .menu__more {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ================================
@@ -433,7 +501,7 @@ section {
 
 #about p {
   color: var(--color-dark);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 /* ================================
@@ -451,7 +519,13 @@ section {
 #contact p {
   margin-top: var(--space-sm);
   color: var(--color-dark);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.contact__icon {
+  font-size: 1.8rem;
+  color: var(--color-green);
+  padding-right: 0.5rem;
 }
 
 #contact a {
@@ -519,8 +593,6 @@ footer ul li a {
 footer p {
   font-size: 1.3rem;
 }
-
-/* Desktops and larger screens */
 
 @media (min-width: 801px) {
   footer ul {
